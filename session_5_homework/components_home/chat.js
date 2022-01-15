@@ -61,7 +61,6 @@ class Chat {
 
         this.$container.appendChild(this.$topChat.render());
         this.$container.appendChild(this.$listChat);
-        this.$container.appendChild(this.$underChat);
         return this.$container;
     }
 }
