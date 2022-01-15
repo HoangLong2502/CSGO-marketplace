@@ -9,6 +9,8 @@ class Skin{
     $type;
     $color;
 
+    $addToCard;
+
     constructor(img, name, price, type, color){
         this.$container = document.createElement('div');
         this.$container.classList.add('skin_container');
@@ -30,6 +32,10 @@ class Skin{
         this.$type.innerHTML = type;
         this.$color = document.createElement('div');
         this.$color.style.backgroundColor = color;
+
+        this.$addToCard = document.createElement('div');
+        this.$addToCard.classList.add('uil-shopping-basket');
+        this.$addToCard.classList.add('add_to_card');
     }
 
     render(){
@@ -44,6 +50,7 @@ class Skin{
         this.$container.appendChild(this.$boximg);
         this.$container.appendChild(this.$title);
         this.$container.appendChild(this.$detail);
+        this.$container.appendChild(this.$addToCard);
         return this.$container;
     }
 }

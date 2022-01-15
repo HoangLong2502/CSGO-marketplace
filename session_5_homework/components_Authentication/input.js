@@ -9,11 +9,11 @@ class Input{
         this.$container.classList.add('input');
 
         this.$label = document.createElement('label');
-        this.$label.innerHTML = label;
 
         this.$input = document.createElement('input');
         this.$input.type = type;
         this.$input.name = name;
+        this.$input.placeholder = label;
 
         this.$errorMsg = document.createElement('div');
         this.$errorMsg.classList.add('error_msg');

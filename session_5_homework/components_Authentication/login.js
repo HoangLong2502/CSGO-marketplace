@@ -33,6 +33,7 @@ class Login{
         this.$btnSubmit.innerHTML = 'Login';
 
         this.$btnMoveToSignUp = document.createElement('button');
+        this.$btnMoveToSignUp.classList.add('btn_move_signup');
         this.$btnMoveToSignUp.innerHTML = 'Move To SignUp';
         this.$btnMoveToSignUp.addEventListener('click', this.moveToSignUp);
     }
