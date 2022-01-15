@@ -1,3 +1,6 @@
+import { setScreen } from "../app.js";
+import { Login } from "../components_Authentication/login.js";
+
 class Header{
     $container;
 
@@ -49,6 +52,12 @@ class Header{
         this.$btnLogout = document.createElement('button');
         this.$btnLogout.classList.add('btn_logout');
         this.$btnLogout.innerHTML = 'Log Out';
+        this.$btnLogout.addEventListener('click', this.Logout);
+    }
+
+    Logout = () =>{
+        const login = new Login();
+        setScreen(login);
     }
 
     render(){

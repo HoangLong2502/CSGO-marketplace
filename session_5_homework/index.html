@@ -13,6 +13,24 @@
         <img src="./img/f02b1965126337.6021db766416d.jpg" class="img_background_body">
     </div>
 
-    <script src="./index.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyArwoa-PBTZN3JK4-PCJX_dmoq26qsEcdM",
+            authDomain: "csgo-marketpalce.firebaseapp.com",
+            projectId: "csgo-marketpalce",
+            storageBucket: "csgo-marketpalce.appspot.com",
+            messagingSenderId: "285403596523",
+            appId: "1:285403596523:web:1c49c38f24778ec29d20ae"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
+    <script src="index.js" type="module"></script>
 </body>
 </html>

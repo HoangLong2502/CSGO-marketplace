@@ -1,9 +1,14 @@
-import { Header } from "./compoinents/header.js";
-import { Body } from "./compoinents/body.js";
+import { setScreen } from "./app.js"
+import { Login } from "./components_Authentication/login.js";
+import { homePage } from "./home_page.js"
 
-const app = document.getElementById('app');
-const header = new Header();
-const body = new Body();
-
-app.appendChild(header.render());
-app.appendChild(body.render());
+firebase.auth().onAuthStateChanged((user) =>{
+    if(user){
+        const homepage = new homePage();
+        setScreen(homepage);
+    }
+    else {
+        const login = new Login();
+        setScreen(login);
+    }
+});
