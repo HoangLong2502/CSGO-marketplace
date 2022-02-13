@@ -25,6 +25,7 @@ class CreateChatModal {
         this.$btnCancel = document.createElement('button');
         this.$btnCancel.type = 'Button';
         this.$btnCancel.innerHTML = 'Cancel';
+        
         this.$btnCancel.addEventListener('click', this.handleCancel);
     }
 
